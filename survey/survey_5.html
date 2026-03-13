@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Emotion Survey</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="ShortIntro">Please view the image below and describe your emotional response using the text input and emotion map.</h1>
+        <div class="image-section">
+            <img src="your-image.jpg" alt="Stimulus Image" />
+        </div>
+        <div class="text-section">
+            <label for="emotionText">Describe your emotion:</label>
+            <br>
+            <input type="text" id="emotionText" placeholder="Type what you feel..." />
+        </div>
+    </div>
+
+    <!-- Emotion Map -->
+    <div class="emotion-map" id="emotionMap">
+        <div class="axis horizontal"></div>
+        <div class="axis vertical"></div>
+
+        <div class="label happy">HAPPY</div>
+        <div class="label fear">FEAR</div>
+        <div class="label anger">ANGER</div>
+        <div class="label sad">SAD</div>
+
+        <div class="dot" id="dot"></div>
+    </div>
+
+    <button id="SubmitBtn">Submit</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
