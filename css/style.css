@@ -106,10 +106,10 @@ body.on .bulb span:nth-child(2) {
 
 .switch {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
-    width: 80px;
-    height: 80px;
+    bottom: 500px;
+    right: 70px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(#eee,#ccc,#eee);
     border: 3px solid #000;
     border-radius: 10px;
@@ -143,5 +143,27 @@ body.on .bulb span:nth-child(2) {
 
 .on .switch .btn::before {
     top:15%;
+}
+
+ .navigation-bar {
+    position: absolute;
+    bottom: 350px;
+ }
+
+ .navigation-bar.SurveyBtn {
+    color: #222;
+    
+ }
+
+.info {
+    position: fixed;
+    bottom: 200px;
+    color: #222;
+}
+
+.forexample {
+    position: fixed;
+    bottom: 250px;
+    color: #222;
 }
 /* https://youtu.be/xmOk1VMNujA?si=aO0UtFuMJqRQEO7N */

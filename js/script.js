@@ -14,7 +14,7 @@ AboutButton.onclick = function () {
     window.location.href = "about.html"; // Redirect the user to the about page
 }
 
-let btn = document.querySelector('.btn')
+let btn = document.querySelector(".btn");
 let body = document.body;
 
 btn.addEventListener("click", () => {
