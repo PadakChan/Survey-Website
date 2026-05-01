@@ -96,9 +96,11 @@ def next_survey():
 @app.route('/submit', methods=['POST']) 
 
 def submit():
+    # data = request.json is used to get the data sent from the frontend in JSON format.
     data = request.json
 
-    text = data.get("text")
+    text = data.get("text") 
+    # get the text input from the frontend
     happy = data.get("happy")
     sad = data.get("sad")
     fear = data.get("fear")
@@ -112,8 +114,9 @@ def submit():
 
     # save into survey_1.csv, survey_2.csv, etc.
     filename = f"{survey_name}.csv"
-
-    file_exists = os.path.exists(filename)
+    
+    file_exists = os.path.exists(filename) 
+    # check if the file exists
 
     with open(filename, "a", newline="") as file:
         writer = csv.writer(file)
@@ -122,6 +125,8 @@ def submit():
             writer.writerow(["timestamp", "text", "happy", "sad", "fear", "anger"])
 
         writer.writerow([
+            # writeerow is use to write a row of data into the csv file. 
+            # save to the CSV file with the following colums
             datetime.now(),
             text,
             happy,
@@ -131,7 +136,7 @@ def submit():
         ])
     # the data is saved into a CSV file named after the current survey page (e.g., survey_1.csv, survey_2.csv, etc.).
     return jsonify({"status": "saved"}) 
-
+# cite: https://www.geeksforgeeks.org/python/how-to-create-csv-output-in-flask/?utm_source=chatgpt.com
 
 # THANK YOU PAGE 
 @app.route('/thankyou')

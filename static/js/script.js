@@ -80,7 +80,7 @@ function sendData() {
     if (!textInput || !dot || !map) return;
 
     let text = textInput.value;
-
+    // getBoundingClientRect() is a method that returns the size of an element and its position relative to the viewport.
     let rect = map.getBoundingClientRect();
 
     let x = dot.offsetLeft;
@@ -140,7 +140,7 @@ homeBtn.onclick = function () {
 };
 
 
-
+// PRACTICE (IGNORE)
 // let Surveybutton = document.getElementById("SurveyBtn");
 // Surveybutton.onclick = function () {
 //     window.location.href = "survey/intro.html"; // Redirect the user to the random survey page
