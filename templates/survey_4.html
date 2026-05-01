@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Emotion Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="ShortIntro">Please view the image below and describe your emotional response using the text input and
+            emotion map.</h1>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='img/Pottery.jpeg') }}" alt="Pottery" />
+        </div>
+        <div class="text-section">
+            <label for="emotionText">Describe your emotion:</label>
+            <br>
+            <input type="text" id="emotionText" placeholder="Type what you feel..." />
+        </div>
+
+        <!-- Emotion Map -->
+        <!-- Going to make it cool-->
+        <div class="emotion-map" id="emotionMap">
+            <div class="axis horizontal"></div>
+            <div class="axis vertical"></div>
+
+            <div class="label happy">HAPPY</div>
+            <div class="label fear">FEAR</div>
+            <div class="label anger">ANGER</div> <!-- bottom -->
+            <div class="label sad">SAD</div> <!-- right -->
+
+            <div class="dot" id="dot"></div>
+        </div>
+
+        <button id="SubmitBtn">Submit</button>
+
+    </div>
+    <div id="fadeScreen"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

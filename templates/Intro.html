@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Emotion Intro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
+</head>
+
+<body>
+    <div class="IntroContainer">
+        <h1 class="IntroTitle"> This is Project Emotion Survey</h1>
+        <p class="IntroText"> This survey is not about finding the correct emotion, but about noticing what you feel in
+            the moment.</p>
+        <p class="IntroText"> Each image does not contain a fixed meaning. Instead, it invites you to project your own
+            experience onto it.
+            By describing and placing your emotion, you begin to see how feelings are not always clear or singular, but
+            layered and shifting. </p>
+        <p class="IntroText"> This process is meant to slow down your reaction and turn it into reflection. </p>
+
+        <button id="SubmitBtn">Start Survey</button>
+
+    </div>
+    <div id="fadeScreen"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>

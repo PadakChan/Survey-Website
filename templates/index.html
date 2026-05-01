@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://stackoverflow.com/questions/69217390/linking-css-to-html-in-flask -->
+<!-- for switching from nomal HTML style into Flask Version -->
+<!--  {{url_for('static', filename='filename')}} -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="light">
+        <div class="wire"></div>
+        <div class="bulb">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="switch">
+            <div class="btn"></div>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="bulb-container">
+            <div class="light"></div>
+        </div>
+        <div class="settings">
+            <div class="toggle" id="toggle"></div>
+            <h1>Color Picker</h1>
+            <div class="picker"></div>
+        </div> -->
+
+    <div class="navigation-bar">
+        <button id="SurveyBtn">Survey</button>
+        <button id="AboutBtn">About</button>
+    </div>
+    </div>
+    <div class="hiddenmessage1">
+        <h1> Recognition is not understanding.</h1>
+    </div>
+    <div class="hiddenmessage2">
+        <h1> Emotion is not universal. </h1>
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
