@@ -80,7 +80,6 @@ function sendData() {
     if (!textInput || !dot || !map) return;
 
     let text = textInput.value;
-    // getBoundingClientRect() is a method that returns the size of an element and its position relative to the viewport.
     let rect = map.getBoundingClientRect();
 
     let x = dot.offsetLeft;
@@ -117,7 +116,7 @@ let fadeScreen = document.getElementById("fadeScreen");
 
 if (button) {
     button.onclick = async function () { //async is used to make the function asynchronous
-//https://www.geeksforgeeks.org/javascript/asynchronous-javascript/
+        //https://www.geeksforgeeks.org/javascript/asynchronous-javascript/
         if (document.getElementById("emotionText") && dot && map) {
             await sendData(); //await is used to wait for the sendData() function
         }
