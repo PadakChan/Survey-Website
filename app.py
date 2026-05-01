@@ -144,6 +144,32 @@ def thankyou():
     return render_template("thankyou.html")
 
 
+# VIEW ALL CSV DATA ON RENDER
+@app.route('/view-data')
+def view_data():
+    survey_files = [
+        "survey_1.csv",
+        "survey_2.csv",
+        "survey_3.csv",
+        "survey_4.csv",
+        "survey_5.csv",
+        "survey_6.csv"
+    ]
+
+    html = "<h1>Survey Data</h1>"
+
+    for filename in survey_files:
+        html += f"<h2>{filename}</h2>"
+
+        if os.path.exists(filename):
+            with open(filename, "r") as file:
+                content = file.read()
+                html += f"<pre>{content}</pre>"
+        else:
+            html += "<p>No data yet.</p>"
+
+    return html
+
 # RUN APP 
 if __name__ == '__main__':
     app.run()
