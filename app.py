@@ -60,9 +60,9 @@ def about():
 
 
 # INTRO PAGE 
-@app.route('/intro')
+@app.route('/Intro')
 def intro():
-    return render_template("intro.html")
+    return render_template("Intro.html")
 
 
 #  START SURVEY
@@ -74,7 +74,7 @@ def start():
     # which can help reduce bias in the results.
     session["surveys"] = surveys
 
-    return redirect(url_for("intro"))
+    return redirect(url_for("Intro"))
 
 
 #  NEXT SURVEY 
