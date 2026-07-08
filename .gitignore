@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.DS_Store
+responses.db
+budget/budget.db
+budget/sheet_config.json
